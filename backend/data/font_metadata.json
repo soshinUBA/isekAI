@@ -1,0 +1,547 @@
+[
+  {
+    "font_name": "Canela",
+    "slug": "canela",
+    "category": "serif",
+    "mood_tags": [
+      "luxury",
+      "editorial",
+      "elegant"
+    ],
+    "use_cases": [
+      "branding",
+      "editorial",
+      "fashion"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "refined",
+      "display"
+    ],
+    "language_support": [
+      "latin",
+      "latin extended"
+    ],
+    "weights_count": 6,
+    "licensing_fit": [
+      "desktop",
+      "web",
+      "enterprise"
+    ]
+  },
+  {
+    "font_name": "Didot",
+    "slug": "didot",
+    "category": "serif",
+    "mood_tags": [
+      "classic",
+      "fashion",
+      "elegant"
+    ],
+    "use_cases": [
+      "editorial",
+      "fashion",
+      "branding"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "thin hairlines",
+      "display"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 4,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Bodoni 72",
+    "slug": "bodoni-72",
+    "category": "serif",
+    "mood_tags": [
+      "classic",
+      "dramatic",
+      "editorial"
+    ],
+    "use_cases": [
+      "editorial",
+      "packaging",
+      "branding"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "modern classic"
+    ],
+    "language_support": [
+      "latin",
+      "latin extended"
+    ],
+    "weights_count": 8,
+    "licensing_fit": [
+      "desktop",
+      "web",
+      "enterprise"
+    ]
+  },
+  {
+    "font_name": "Noe Display",
+    "slug": "noe-display",
+    "category": "serif",
+    "mood_tags": [
+      "expressive",
+      "premium",
+      "editorial"
+    ],
+    "use_cases": [
+      "headlines",
+      "campaigns",
+      "editorial"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "display",
+      "refined"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 5,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Reckless Neue",
+    "slug": "reckless-neue",
+    "category": "serif",
+    "mood_tags": [
+      "bold",
+      "editorial",
+      "modern"
+    ],
+    "use_cases": [
+      "branding",
+      "editorial",
+      "advertising"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "characterful"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 6,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Nowstalgic",
+    "slug": "nowstalgic",
+    "category": "display",
+    "mood_tags": [
+      "retro",
+      "playful",
+      "display"
+    ],
+    "use_cases": [
+      "posters",
+      "branding",
+      "social"
+    ],
+    "visual_attributes": [
+      "rounded",
+      "nostalgic"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 3,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Viale",
+    "slug": "viale",
+    "category": "sans",
+    "mood_tags": [
+      "clean",
+      "urban",
+      "modern"
+    ],
+    "use_cases": [
+      "wayfinding",
+      "branding",
+      "ui"
+    ],
+    "visual_attributes": [
+      "geometric",
+      "legible"
+    ],
+    "language_support": [
+      "latin",
+      "latin extended"
+    ],
+    "weights_count": 10,
+    "licensing_fit": [
+      "desktop",
+      "web",
+      "enterprise"
+    ]
+  },
+  {
+    "font_name": "Marcante",
+    "slug": "marcante",
+    "category": "serif",
+    "mood_tags": [
+      "warm",
+      "editorial",
+      "humanist"
+    ],
+    "use_cases": [
+      "editorial",
+      "branding"
+    ],
+    "visual_attributes": [
+      "refined",
+      "readable"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 4,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Trixy",
+    "slug": "trixy",
+    "category": "display",
+    "mood_tags": [
+      "quirky",
+      "display",
+      "playful"
+    ],
+    "use_cases": [
+      "headlines",
+      "packaging"
+    ],
+    "visual_attributes": [
+      "decorative",
+      "display"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 2,
+    "licensing_fit": [
+      "desktop"
+    ]
+  },
+  {
+    "font_name": "Freight Display",
+    "slug": "freight-display",
+    "category": "serif",
+    "mood_tags": [
+      "literary",
+      "warm",
+      "editorial"
+    ],
+    "use_cases": [
+      "editorial",
+      "publishing"
+    ],
+    "visual_attributes": [
+      "refined",
+      "readable"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 6,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "GT Super",
+    "slug": "gt-super",
+    "category": "serif",
+    "mood_tags": [
+      "luxury",
+      "editorial",
+      "expressive"
+    ],
+    "use_cases": [
+      "branding",
+      "editorial",
+      "fashion"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "display"
+    ],
+    "language_support": [
+      "latin",
+      "latin extended"
+    ],
+    "weights_count": 7,
+    "licensing_fit": [
+      "desktop",
+      "web",
+      "enterprise"
+    ]
+  },
+  {
+    "font_name": "Domaine Display",
+    "slug": "domaine-display",
+    "category": "serif",
+    "mood_tags": [
+      "heritage",
+      "editorial",
+      "elegant"
+    ],
+    "use_cases": [
+      "editorial",
+      "branding"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "refined"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 5,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Portrait",
+    "slug": "portrait",
+    "category": "serif",
+    "mood_tags": [
+      "luxury",
+      "editorial",
+      "sharp"
+    ],
+    "use_cases": [
+      "fashion",
+      "editorial",
+      "branding"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "display"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 6,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "SangBleu Kingdom",
+    "slug": "sangbleu-kingdom",
+    "category": "serif",
+    "mood_tags": [
+      "premium",
+      "fashion",
+      "editorial"
+    ],
+    "use_cases": [
+      "branding",
+      "editorial"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "elegant"
+    ],
+    "language_support": [
+      "latin",
+      "latin extended"
+    ],
+    "weights_count": 8,
+    "licensing_fit": [
+      "desktop",
+      "web",
+      "enterprise"
+    ]
+  },
+  {
+    "font_name": "Migra",
+    "slug": "migra",
+    "category": "display",
+    "mood_tags": [
+      "dramatic",
+      "display",
+      "modern"
+    ],
+    "use_cases": [
+      "headlines",
+      "posters"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "display"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 4,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Romana",
+    "slug": "romana",
+    "category": "serif",
+    "mood_tags": [
+      "classic",
+      "book",
+      "traditional"
+    ],
+    "use_cases": [
+      "publishing",
+      "editorial"
+    ],
+    "visual_attributes": [
+      "readable",
+      "traditional"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 4,
+    "licensing_fit": [
+      "desktop"
+    ]
+  },
+  {
+    "font_name": "Walbaum",
+    "slug": "walbaum",
+    "category": "serif",
+    "mood_tags": [
+      "elegant",
+      "classic",
+      "editorial"
+    ],
+    "use_cases": [
+      "editorial",
+      "branding"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "refined"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 5,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Ambroise",
+    "slug": "ambroise",
+    "category": "serif",
+    "mood_tags": [
+      "historic",
+      "luxury",
+      "editorial"
+    ],
+    "use_cases": [
+      "editorial",
+      "branding",
+      "fashion"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "display"
+    ],
+    "language_support": [
+      "latin",
+      "latin extended"
+    ],
+    "weights_count": 9,
+    "licensing_fit": [
+      "desktop",
+      "web",
+      "enterprise"
+    ]
+  },
+  {
+    "font_name": "Quadraat",
+    "slug": "quadraat",
+    "category": "serif",
+    "mood_tags": [
+      "humanist",
+      "warm",
+      "editorial"
+    ],
+    "use_cases": [
+      "editorial",
+      "publishing"
+    ],
+    "visual_attributes": [
+      "readable",
+      "refined"
+    ],
+    "language_support": [
+      "latin",
+      "latin extended"
+    ],
+    "weights_count": 6,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  },
+  {
+    "font_name": "Financier Display",
+    "slug": "financier-display",
+    "category": "serif",
+    "mood_tags": [
+      "luxury",
+      "editorial",
+      "sharp"
+    ],
+    "use_cases": [
+      "editorial",
+      "finance",
+      "branding"
+    ],
+    "visual_attributes": [
+      "high contrast",
+      "display"
+    ],
+    "language_support": [
+      "latin"
+    ],
+    "weights_count": 5,
+    "licensing_fit": [
+      "desktop",
+      "web"
+    ]
+  }
+]

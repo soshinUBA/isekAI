@@ -1,0 +1,12 @@
+.agent-dashboard h1 { font-size: 1.5rem; }
+.agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.agent-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; }
+.agent-card h2 { display: flex; align-items: center; gap: 0.5rem; }
+.agent-card .score { font-size: 1.25rem; font-weight: 700; color: #0d6efd; }
+.agent-card .action-hint { font-size: 0.9rem; color: #555; margin: 0.5rem 0; padding: 0.5rem; background: #f0f7ff; border-radius: 4px; }
+.customer-select { display: flex; flex-direction: column; gap: 0.35rem; margin: 1rem 0; }
+.email-body { white-space: pre-wrap; background: #f6f6f6; padding: 0.75rem; border-radius: 6px; font-size: 0.9rem; }
+
+.badge { font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
+.badge-ai { background: #d4edda; color: #155724; }
+.badge-rule { background: #fff3cd; color: #856404; }

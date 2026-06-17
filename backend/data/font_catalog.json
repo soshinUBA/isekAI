@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Canela",
+    "slug": "canela",
+    "foundry": "Commercial Type",
+    "price": 49.0,
+    "category": "serif",
+    "featured": true,
+    "description": "Canela from Commercial Type \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Didot",
+    "slug": "didot",
+    "foundry": "Linotype",
+    "price": 39.0,
+    "category": "serif",
+    "featured": true,
+    "description": "Didot from Linotype \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Bodoni 72",
+    "slug": "bodoni-72",
+    "foundry": "Adobe",
+    "price": 35.0,
+    "category": "serif",
+    "featured": true,
+    "description": "Bodoni 72 from Adobe \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Noe Display",
+    "slug": "noe-display",
+    "foundry": "Schick Toikka",
+    "price": 55.0,
+    "category": "serif",
+    "featured": true,
+    "description": "Noe Display from Schick Toikka \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Reckless Neue",
+    "slug": "reckless-neue",
+    "foundry": "OH no Type Co.",
+    "price": 45.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Reckless Neue from OH no Type Co. \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Nowstalgic",
+    "slug": "nowstalgic",
+    "foundry": "Latinotype",
+    "price": 29.0,
+    "category": "display",
+    "featured": false,
+    "description": "Nowstalgic from Latinotype \u2014 a display typeface for professional design work."
+  },
+  {
+    "name": "Viale",
+    "slug": "viale",
+    "foundry": "Dalton Maag",
+    "price": 42.0,
+    "category": "sans",
+    "featured": false,
+    "description": "Viale from Dalton Maag \u2014 a sans typeface for professional design work."
+  },
+  {
+    "name": "Marcante",
+    "slug": "marcante",
+    "foundry": "Cadson Demak",
+    "price": 38.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Marcante from Cadson Demak \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Trixy",
+    "slug": "trixy",
+    "foundry": "Type Associates",
+    "price": 32.0,
+    "category": "display",
+    "featured": false,
+    "description": "Trixy from Type Associates \u2014 a display typeface for professional design work."
+  },
+  {
+    "name": "Freight Display",
+    "slug": "freight-display",
+    "foundry": "GarageFonts",
+    "price": 40.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Freight Display from GarageFonts \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "GT Super",
+    "slug": "gt-super",
+    "foundry": "Grilli Type",
+    "price": 50.0,
+    "category": "serif",
+    "featured": true,
+    "description": "GT Super from Grilli Type \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Domaine Display",
+    "slug": "domaine-display",
+    "foundry": "Klim Type Foundry",
+    "price": 48.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Domaine Display from Klim Type Foundry \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Portrait",
+    "slug": "portrait",
+    "foundry": "Commercial Type",
+    "price": 52.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Portrait from Commercial Type \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "SangBleu Kingdom",
+    "slug": "sangbleu-kingdom",
+    "foundry": "Swiss Typefaces",
+    "price": 60.0,
+    "category": "serif",
+    "featured": false,
+    "description": "SangBleu Kingdom from Swiss Typefaces \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Migra",
+    "slug": "migra",
+    "foundry": "Pangram Pangram",
+    "price": 28.0,
+    "category": "display",
+    "featured": false,
+    "description": "Migra from Pangram Pangram \u2014 a display typeface for professional design work."
+  },
+  {
+    "name": "Romana",
+    "slug": "romana",
+    "foundry": "Linotype",
+    "price": 34.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Romana from Linotype \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Walbaum",
+    "slug": "walbaum",
+    "foundry": "Berthold",
+    "price": 36.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Walbaum from Berthold \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Ambroise",
+    "slug": "ambroise",
+    "foundry": "Typofonderie",
+    "price": 58.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Ambroise from Typofonderie \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Quadraat",
+    "slug": "quadraat",
+    "foundry": "FontFont",
+    "price": 33.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Quadraat from FontFont \u2014 a serif typeface for professional design work."
+  },
+  {
+    "name": "Financier Display",
+    "slug": "financier-display",
+    "foundry": "Klim Type Foundry",
+    "price": 46.0,
+    "category": "serif",
+    "featured": false,
+    "description": "Financier Display from Klim Type Foundry \u2014 a serif typeface for professional design work."
+  }
+]
