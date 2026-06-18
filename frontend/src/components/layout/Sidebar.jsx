@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { getHighIntentQueue, getOffersWithCustomers } from "../../api";
 
 const navItems = [
   {
@@ -44,6 +46,33 @@ const bottomItems = [
 ];
 
 export default function Sidebar() {
+  const [stats, setStats] = useState({
+    highIntent: 0,
+    pending: 0,
+    offers: 0,
+  });
+
+  useEffect(() => {
+    const loadStats = async () => {
+      try {
+        const [queue, offers] = await Promise.all([
+          getHighIntentQueue(),
+          getOffersWithCustomers(),
+        ]);
+        setStats({
+          highIntent: queue.length,
+          pending: queue.filter((c) => c.status === "pending").length,
+          offers: offers.length,
+        });
+      } catch (err) {
+        console.error("Failed to load sidebar stats:", err);
+      }
+    };
+    loadStats();
+    const interval = setInterval(loadStats, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <aside className="w-60 bg-white border-r border-gray-200 fixed left-0 top-14 bottom-0 flex flex-col">
       <nav className="flex-1 px-3 py-4">
@@ -75,15 +104,15 @@ export default function Sidebar() {
           <div className="mt-3 px-3 space-y-3">
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-500">High Intent</span>
-              <span className="font-semibold text-gray-900">10</span>
+              <span className="font-semibold text-gray-900">{stats.highIntent}</span>
             </div>
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-500">Pending Emails</span>
-              <span className="font-semibold text-amber-600">8</span>
+              <span className="font-semibold text-amber-600">{stats.pending}</span>
             </div>
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-500">Active Offers</span>
-              <span className="font-semibold text-emerald-600">3</span>
+              <span className="font-semibold text-emerald-600">{stats.offers}</span>
             </div>
           </div>
         </div>

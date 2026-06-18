@@ -32,3 +32,6 @@ export const sendEmail = (userId) => request("/queue/" + userId + "/send", { met
 export const getOffersWithCustomers = () => request("/offers/with-customers");
 export const addOffer = (offer) => request("/offers", { method: "POST", body: JSON.stringify(offer) });
 export const removeOffer = (fontName) => request("/offers/" + encodeURIComponent(fontName), { method: "DELETE" });
+
+export const getNewArrivalRecommendations = () => request("/queue/new-arrival-recommendations");
+export const getNewArrivals = () => request("/new-arrivals");

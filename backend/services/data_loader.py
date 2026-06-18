@@ -81,6 +81,14 @@ def load_font_offers() -> list[dict[str, Any]]:
         return json.load(f)
 
 
+def load_new_arrivals() -> list[dict[str, Any]]:
+    path = DATA_DIR / "new_arrivals.json"
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8") as f:
+        return json.load(f)
+
+
 def save_font_offers(offers: list[dict[str, Any]]) -> None:
     path = DATA_DIR / "font_offers.json"
     with path.open("w", encoding="utf-8") as f:

@@ -1,0 +1,68 @@
+[
+  {
+    "font_name": "Vanguard Neo",
+    "slug": "vanguard-neo",
+    "category": "sans-serif",
+    "release_date": "2026-06-20",
+    "mood_tags": ["modern", "tech", "bold"],
+    "use_cases": ["branding", "tech", "startups"],
+    "visual_attributes": ["geometric", "clean", "sharp"],
+    "description": "A bold geometric sans-serif designed for modern tech brands and digital-first companies.",
+    "price": 59.0
+  },
+  {
+    "font_name": "Bellini Script",
+    "slug": "bellini-script",
+    "category": "script",
+    "release_date": "2026-06-18",
+    "mood_tags": ["elegant", "romantic", "luxury"],
+    "use_cases": ["wedding", "invitations", "branding"],
+    "visual_attributes": ["flowing", "ornate", "connected"],
+    "description": "An elegant script font with beautiful flourishes, perfect for luxury branding and special occasions.",
+    "price": 45.0
+  },
+  {
+    "font_name": "Brutalist Mono",
+    "slug": "brutalist-mono",
+    "category": "monospace",
+    "release_date": "2026-06-22",
+    "mood_tags": ["industrial", "developer", "minimal"],
+    "use_cases": ["coding", "tech", "editorial"],
+    "visual_attributes": ["monospaced", "blocky", "functional"],
+    "description": "A brutalist-inspired monospace font optimized for code editors and technical documentation.",
+    "price": 35.0
+  },
+  {
+    "font_name": "Aurora Display",
+    "slug": "aurora-display",
+    "category": "display",
+    "release_date": "2026-06-25",
+    "mood_tags": ["creative", "artistic", "bold"],
+    "use_cases": ["posters", "headlines", "advertising"],
+    "visual_attributes": ["high-contrast", "dramatic", "expressive"],
+    "description": "A striking display typeface that commands attention in headlines and large-format designs.",
+    "price": 55.0
+  },
+  {
+    "font_name": "Sakura Sans",
+    "slug": "sakura-sans",
+    "category": "sans-serif",
+    "release_date": "2026-06-19",
+    "mood_tags": ["friendly", "warm", "approachable"],
+    "use_cases": ["apps", "UI", "children"],
+    "visual_attributes": ["rounded", "soft", "readable"],
+    "description": "A friendly rounded sans-serif with excellent readability, ideal for apps and user interfaces.",
+    "price": 42.0
+  },
+  {
+    "font_name": "Chronicle Serif",
+    "slug": "chronicle-serif",
+    "category": "serif",
+    "release_date": "2026-06-21",
+    "mood_tags": ["classic", "editorial", "sophisticated"],
+    "use_cases": ["publishing", "editorial", "books"],
+    "visual_attributes": ["traditional", "refined", "readable"],
+    "description": "A timeless serif designed for long-form reading with a contemporary twist on classical proportions.",
+    "price": 48.0
+  }
+]

@@ -166,6 +166,45 @@ def get_high_intent_queue() -> list[dict[str, Any]]:
     return batch_processor.get_high_intent_queue()
 
 
+@app.get("/queue/new-arrival-recommendations")
+def get_new_arrival_recommendations() -> list[dict[str, Any]]:
+    """Get all customers with their AI-matched new arrival font recommendations."""
+    queue = batch_processor.get_high_intent_queue()
+    new_arrivals = data_loader.load_new_arrivals()
+    new_arrivals_map = {f["font_name"]: f for f in new_arrivals}
+    
+    results = []
+    for customer in queue:
+        recs = customer.get("new_arrival_recommendations", [])
+        if recs:
+            enriched_recs = []
+            for rec in recs:
+                font_info = new_arrivals_map.get(rec["font_name"], {})
+                enriched_recs.append({
+                    **rec,
+                    "category": font_info.get("category", ""),
+                    "description": font_info.get("description", ""),
+                    "price": font_info.get("price"),
+                    "release_date": font_info.get("release_date", ""),
+                })
+            results.append({
+                "user_id": customer["user_id"],
+                "email": customer["email"],
+                "company": customer.get("company", ""),
+                "intent_score": customer["intent_score"],
+                "intent_level": customer["intent_level"],
+                "new_arrival_recommendations": enriched_recs,
+            })
+    
+    return sorted(results, key=lambda x: x["intent_score"], reverse=True)
+
+
+@app.get("/new-arrivals")
+def get_new_arrivals() -> list[dict[str, Any]]:
+    """Get all new arrival fonts."""
+    return data_loader.load_new_arrivals()
+
+
 @app.put("/queue/{user_id}/update-draft", response_model=QueueItem)
 def update_draft(user_id: str, body: UpdateDraftRequest) -> dict[str, Any]:
     """Update/edit the email draft for a customer in the queue."""

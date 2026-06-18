@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getHighIntentQueue, runBatchProcess, updateDraft, sendEmail, getOffersWithCustomers } from "../api";
+import { getHighIntentQueue, runBatchProcess, updateDraft, sendEmail, getOffersWithCustomers, getNewArrivalRecommendations } from "../api";
 
 function KPICard({ title, value, subtitle, trend, trendUp }) {
   return (
@@ -58,6 +58,8 @@ export default function SalesDashboard() {
   const [sending, setSending] = useState(false);
   const [offers, setOffers] = useState([]);
   const [loadingOffers, setLoadingOffers] = useState(false);
+  const [newArrivalRecs, setNewArrivalRecs] = useState([]);
+  const [loadingNewArrivals, setLoadingNewArrivals] = useState(false);
   const [editSubject, setEditSubject] = useState("");
   const [editBody, setEditBody] = useState("");
 
@@ -82,9 +84,18 @@ export default function SalesDashboard() {
       .finally(() => setLoadingOffers(false));
   };
 
+  const loadNewArrivals = () => {
+    setLoadingNewArrivals(true);
+    getNewArrivalRecommendations()
+      .then(setNewArrivalRecs)
+      .catch(console.error)
+      .finally(() => setLoadingNewArrivals(false));
+  };
+
   useEffect(() => {
     loadQueue();
     loadOffers();
+    loadNewArrivals();
   }, []);
 
   const selected = queue.find((c) => c.user_id === selectedId);
@@ -103,6 +114,7 @@ export default function SalesDashboard() {
         alert(`Processed ${result.processed} customers. ${result.high_intent} high-intent found.`);
         loadQueue();
         loadOffers();
+        loadNewArrivals();
       })
       .catch((err) => alert("Error: " + err.message))
       .finally(() => setProcessing(false));
@@ -142,6 +154,7 @@ export default function SalesDashboard() {
     { id: "high-intent", label: "High Intent Queue", count: queue.length },
     { id: "recommendations", label: "Recommended Fonts" },
     { id: "offers", label: "Offers", count: offers.length },
+    { id: "new-arrivals", label: "New Arrivals Recommends", count: newArrivalRecs.length },
   ];
 
   return (
@@ -211,6 +224,7 @@ export default function SalesDashboard() {
               onClick={() => {
                 setActiveTab(tab.id);
                 if (tab.id === "offers") loadOffers();
+                if (tab.id === "new-arrivals") loadNewArrivals();
               }}
               className={`py-3 px-1 border-b-2 text-sm font-medium transition-colors ${
                 activeTab === tab.id
@@ -507,6 +521,78 @@ export default function SalesDashboard() {
                             <IntentBadge score={customer.intent_score} />
                           </div>
                           <p className="text-xs text-gray-600 mt-2 line-clamp-2">{customer.match_reason}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* New Arrivals Recommends Tab */}
+      {activeTab === "new-arrivals" && (
+        <div>
+          {loadingNewArrivals && <p className="text-gray-500 text-center py-8">Loading new arrival recommendations...</p>}
+          {!loadingNewArrivals && newArrivalRecs.length === 0 && (
+            <div className="text-center py-12">
+              <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <p className="text-gray-500 mt-4">No new arrival recommendations yet.</p>
+              <p className="text-sm text-gray-400 mt-1">Run batch process to generate AI-powered recommendations for new fonts.</p>
+            </div>
+          )}
+          <div className="space-y-6">
+            {newArrivalRecs.map((customer) => (
+              <div key={customer.user_id} className="card overflow-hidden">
+                {/* Customer Header */}
+                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 border-b border-indigo-100">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">{customer.email}</h3>
+                      <p className="text-sm text-gray-600">{customer.company || "No company"}</p>
+                    </div>
+                    <IntentBadge score={customer.intent_score} level={customer.intent_level} size="lg" />
+                  </div>
+                </div>
+
+                {/* New Arrival Recommendations */}
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-4">
+                    Recommended New Arrivals ({customer.new_arrival_recommendations?.length || 0})
+                  </h4>
+                  
+                  {(!customer.new_arrival_recommendations || customer.new_arrival_recommendations.length === 0) ? (
+                    <p className="text-gray-500 text-sm">No new font recommendations for this customer.</p>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {customer.new_arrival_recommendations.map((rec, idx) => (
+                        <div key={idx} className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                          <div className="flex items-start justify-between mb-2">
+                            <div>
+                              <h5 className="font-semibold text-indigo-600">{rec.font_name}</h5>
+                              <span className="inline-block mt-1 px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium rounded">
+                                {rec.category}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <span className="text-lg font-bold text-emerald-600">{rec.match_score}</span>
+                              <span className="text-xs text-gray-500">match</span>
+                            </div>
+                          </div>
+                          <p className="text-sm text-gray-600 mb-2 line-clamp-2">{rec.description}</p>
+                          <p className="text-xs text-gray-500 italic mb-2">{rec.reason}</p>
+                          <div className="flex items-center justify-between pt-2 border-t border-gray-100">
+                            <span className="text-xs text-gray-400">
+                              Releases: {rec.release_date ? new Date(rec.release_date).toLocaleDateString() : "—"}
+                            </span>
+                            {rec.price && (
+                              <span className="font-semibold text-gray-900">${rec.price.toFixed(2)}</span>
+                            )}
+                          </div>
                         </div>
                       ))}
                     </div>
