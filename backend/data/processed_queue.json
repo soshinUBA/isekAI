@@ -1,0 +1,1285 @@
+[
+  {
+    "user_id": "U1001",
+    "email": "maya@example.com",
+    "company": "Luxury Brand Co",
+    "processed_at": "2026-06-18T15:54:19.445117",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "The customer is actively searching for a high-end serif font suitable for luxury or fashion-focused use, with significant exploration of display and high-contrast serif options.",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Added to cart",
+          "points": 35
+        },
+        {
+          "signal": "Viewed licensing/pricing multiple times",
+          "points": 25
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Returned to same font family",
+          "points": 20
+        },
+        {
+          "signal": "Compared 2+ fonts",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        },
+        {
+          "signal": "Viewed 5+ fonts",
+          "points": 10
+        }
+      ],
+      "possible_blockers": "The customer may still be evaluating design fit, licensing terms, or comparing pricing before making a purchase decision.",
+      "recommended_fonts": [
+        {
+          "font_name": "Canela",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Fits the fashion use case",
+          "score": 90
+        },
+        {
+          "font_name": "GT Super",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Fits the fashion use case",
+          "score": 85
+        },
+        {
+          "font_name": "Ambroise",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Fits the fashion use case",
+          "score": 85
+        },
+        {
+          "font_name": "Portrait",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Fits the fashion use case",
+          "score": 75
+        },
+        {
+          "font_name": "Didot",
+          "reason": "Matches the serif category; Matches the 'fashion' style interest; Fits the fashion use case",
+          "score": 70
+        }
+      ],
+      "likely_use_case": "The customer is likely sourcing a font for branding, editorial designs, or marketing materials in the luxury or fashion industry.",
+      "buying_stage": "Evaluation stage, with strong intent, evidenced by repeated visits, font comparisons, trial downloads, and license inquiries."
+    },
+    "activity": {
+      "user_id": "U1001",
+      "email": "maya@example.com",
+      "company_domain": "luxurybrand.com",
+      "platform": "MyFonts",
+      "country_code": "US",
+      "organization_name": "Luxury Brand Co",
+      "search_queries": [
+        "luxury serif",
+        "fashion magazine font",
+        "high contrast serif"
+      ],
+      "filters_used": [
+        "serif",
+        "display",
+        "latin extended"
+      ],
+      "font_pages_viewed": [
+        "Didot",
+        "Bodoni 72",
+        "Noe Display",
+        "Canela",
+        "Reckless Neue",
+        "Canela"
+      ],
+      "fonts_compared": [
+        "Didot",
+        "Bodoni 72",
+        "Canela"
+      ],
+      "time_spent_minutes": 42,
+      "visit_count": 5,
+      "repeated_visit_days": 3,
+      "cart_additions": [
+        "Canela"
+      ],
+      "cart_removals": [],
+      "trial_downloads": [
+        "Canela"
+      ],
+      "license_page_visits": 2,
+      "past_purchases": [],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Finding the Perfect Font for Luxury Brand Co",
+      "body": "Hi Maya,\n\nWe noticed you've been exploring some gorgeous serif fonts on MyFonts, and we wanted to check in to see if there's anything we can do to help with your search. It looks like you're interested in fonts with a stylish, high-contrast look\u2014perfect for luxury or fashion-focused designs.\n\nIf you're still deciding, Canela is a fantastic choice and seems to align with what you're looking for. You might also find GT Super or Ambroise interesting\u2014they both have that fashionable sophistication that could work beautifully for your branding or editorial projects.\n\nIf you have any questions about licensing or would like assistance finding the right typeface, feel free to reach out. We're here to help!\n\nBest regards,  \nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:19.445117",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1004",
+    "email": "sophie@example.com",
+    "company": "Maison Laurent",
+    "processed_at": "2026-06-18T15:54:21.992096",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "Customer is exploring high-end serif and display fonts, focused on luxury and fashion-related design needs, with attention to Latin extended characters.",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Added to cart",
+          "points": 35
+        },
+        {
+          "signal": "Viewed licensing/pricing",
+          "points": 20
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Compared 2+ fonts",
+          "points": 15
+        },
+        {
+          "signal": "Existing customer",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        }
+      ],
+      "possible_blockers": "Customer may need more clarity on licensing terms or further confirmation that the selected fonts align with their specific branding requirements.",
+      "recommended_fonts": [
+        {
+          "font_name": "Ambroise",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Fits the fashion use case",
+          "score": 90
+        },
+        {
+          "font_name": "Canela",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Fits the fashion use case",
+          "score": 85
+        },
+        {
+          "font_name": "GT Super",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Fits the fashion use case",
+          "score": 85
+        },
+        {
+          "font_name": "Portrait",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Fits the fashion use case",
+          "score": 80
+        },
+        {
+          "font_name": "SangBleu Kingdom",
+          "reason": "Matches the serif category; Matches the 'fashion' style interest; Supports latin extended",
+          "score": 65
+        }
+      ],
+      "likely_use_case": "Designing materials for a luxury or fashion brand, possibly related to Maison Laurent's branding or French high-end design projects.",
+      "buying_stage": "Consideration stage, with increased engagement (multiple visits, trial downloads, and cart activity) but no completed purchase yet."
+    },
+    "activity": {
+      "user_id": "U1004",
+      "email": "sophie@example.com",
+      "company_domain": "maisonlaurent.fr",
+      "platform": "MyFonts",
+      "country_code": "FR",
+      "organization_name": "Maison Laurent",
+      "search_queries": [
+        "luxury display",
+        "fashion serif",
+        "latin extended"
+      ],
+      "filters_used": [
+        "serif",
+        "display",
+        "latin extended"
+      ],
+      "font_pages_viewed": [
+        "Portrait",
+        "Ambroise",
+        "SangBleu Kingdom",
+        "Didot"
+      ],
+      "fonts_compared": [
+        "Portrait",
+        "Ambroise"
+      ],
+      "time_spent_minutes": 25,
+      "visit_count": 4,
+      "repeated_visit_days": 2,
+      "cart_additions": [
+        "Ambroise"
+      ],
+      "cart_removals": [],
+      "trial_downloads": [
+        "Portrait"
+      ],
+      "license_page_visits": 1,
+      "past_purchases": [
+        "Didot",
+        "Walbaum"
+      ],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Finding the perfect font for Maison Laurent",
+      "body": "Hi Sophie,\n\nWe noticed you\u2019ve been exploring some stunning serif and display fonts on MyFonts recently\u2014excellent choices for luxury and fashion design needs! It looks like Ambroise and Portrait caught your eye, and we can see why\u2014they both bring an elegant and timeless touch.\n\nIf you\u2019re still deciding, let us know if you have any questions about licensing or how these fonts can align with Maison Laurent\u2019s branding. We\u2019re here to help you find the perfect fit!\n\nBy the way, have you checked out Canela or GT Super? They\u2019re also fantastic options for a chic and luxurious style.\n\nLet us know how we can assist you further. We\u2019d love to help you bring your project to life!\n\nBest regards,  \nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:21.992096",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1005",
+    "email": "kenji.tanaka@example.com",
+    "company": "Tokyo Creative Agency",
+    "processed_at": "2026-06-18T15:54:30.378156",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "The customer is actively exploring a geometric sans-serif typeface that is minimalist and compatible with Japanese design needs.",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Added to cart",
+          "points": 35
+        },
+        {
+          "signal": "Viewed licensing/pricing multiple times",
+          "points": 25
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Returned to same font family",
+          "points": 20
+        },
+        {
+          "signal": "Existing customer",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        }
+      ],
+      "possible_blockers": "The customer may need additional clarity on licensing terms, alternatives to 'Viale,' or assurance of design compatibility for their specific creative use case.",
+      "recommended_fonts": [
+        {
+          "font_name": "Viale",
+          "reason": "Matches the sans category; Has geometric visual qualities; Has a complete family with multiple weights",
+          "score": 50
+        },
+        {
+          "font_name": "Bodoni 72",
+          "reason": "Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 15
+        },
+        {
+          "font_name": "Reckless Neue",
+          "reason": "Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 15
+        },
+        {
+          "font_name": "Freight Display",
+          "reason": "Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 15
+        },
+        {
+          "font_name": "GT Super",
+          "reason": "Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 15
+        }
+      ],
+      "likely_use_case": "This font is likely being considered for creative projects tailored to minimalist or modern aesthetics, possibly targeted toward Japanese audiences.",
+      "buying_stage": "Late consideration stage; the customer has spent significant time evaluating the 'Viale' font, including trial downloads and license page visits, but has not yet completed a purchase."
+    },
+    "activity": {
+      "user_id": "U1005",
+      "email": "kenji.tanaka@example.com",
+      "company_domain": "tokyocreative.jp",
+      "platform": "MyFonts",
+      "country_code": "JP",
+      "organization_name": "Tokyo Creative Agency",
+      "search_queries": [
+        "geometric sans",
+        "minimalist typeface",
+        "japanese friendly latin"
+      ],
+      "filters_used": [
+        "sans",
+        "geometric",
+        "extended latin"
+      ],
+      "font_pages_viewed": [
+        "Viale",
+        "Viale",
+        "Viale"
+      ],
+      "fonts_compared": [],
+      "time_spent_minutes": 35,
+      "visit_count": 6,
+      "repeated_visit_days": 4,
+      "cart_additions": [
+        "Viale"
+      ],
+      "cart_removals": [],
+      "trial_downloads": [
+        "Viale"
+      ],
+      "license_page_visits": 3,
+      "past_purchases": [
+        "Canela"
+      ],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Still thinking about Viale? We\u2019re here to help!",
+      "body": "Hi Kenji,\n\nWe noticed you've been exploring our Viale font\u2014a fantastic choice for geometric sans-serif designs with a minimalist and Japanese-friendly aesthetic. It looks like you're pretty close to making a decision, so we just wanted to check in and see if there are any questions we can help answer about licensing, compatibility, or anything else.\n\nIf you'd like to explore similar typefaces, we\u2019d also recommend checking out options like Bodoni 72 or Reckless Neue, which might complement your creative needs beautifully.\n\nFeel free to reply directly to this email or browse the Viale page again to finalize your selection. We\u2019re here to make this process as seamless as possible for you!\n\nWarm regards,\n\nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:30.378156",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1006",
+    "email": "marcus.berg@example.com",
+    "company": "Nordic Games Studio",
+    "processed_at": "2026-06-18T15:54:31.782032",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "The customer is actively exploring display and decorative fonts suitable for gaming or a fantasy-themed context. Focused attention is on bold and stylish options with frequent visits and interactions with specific fonts.",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Added to cart",
+          "points": 35
+        },
+        {
+          "signal": "Viewed licensing/pricing multiple times",
+          "points": 25
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Returned to same font family",
+          "points": 20
+        },
+        {
+          "signal": "Compared 2+ fonts",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        },
+        {
+          "signal": "Viewed 5+ fonts",
+          "points": 10
+        },
+        {
+          "signal": "Removed items from cart",
+          "points": -10
+        }
+      ],
+      "possible_blockers": "Uncertainty about the best fit font; removal of one font from the cart may indicate indecision. Pricing or licensing concerns could also be potential blockers given multiple license page visits.",
+      "recommended_fonts": [
+        {
+          "font_name": "Trixy",
+          "reason": "Matches the display category; Matches the 'display' style interest; Has display visual qualities",
+          "score": 55
+        },
+        {
+          "font_name": "Migra",
+          "reason": "Matches the display category; Matches the 'display' style interest; Has display visual qualities",
+          "score": 55
+        },
+        {
+          "font_name": "Nowstalgic",
+          "reason": "Matches the display category; Matches the 'display' style interest; Licensing options align with pricing research",
+          "score": 45
+        },
+        {
+          "font_name": "Reckless Neue",
+          "reason": "Matches the 'bold' style interest; Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 30
+        },
+        {
+          "font_name": "Canela",
+          "reason": "Has display visual qualities; Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 25
+        }
+      ],
+      "likely_use_case": "Creating or updating game titles or branding for a gaming studio, possibly for launch or rebranding purposes.",
+      "buying_stage": "Mid to late stages; the customer has added items to the cart, compared fonts, and downloaded a trial. They are evaluating and close to making a purchasing decision."
+    },
+    "activity": {
+      "user_id": "U1006",
+      "email": "marcus.berg@example.com",
+      "company_domain": "nordicgames.se",
+      "platform": "MyFonts",
+      "country_code": "SE",
+      "organization_name": "Nordic Games Studio",
+      "search_queries": [
+        "fantasy display",
+        "game title font",
+        "bold display"
+      ],
+      "filters_used": [
+        "display",
+        "decorative"
+      ],
+      "font_pages_viewed": [
+        "Trixy",
+        "Nowstalgic",
+        "Migra",
+        "Noe Display",
+        "Trixy"
+      ],
+      "fonts_compared": [
+        "Trixy",
+        "Nowstalgic",
+        "Migra"
+      ],
+      "time_spent_minutes": 28,
+      "visit_count": 4,
+      "repeated_visit_days": 2,
+      "cart_additions": [
+        "Trixy",
+        "Migra"
+      ],
+      "cart_removals": [
+        "Migra"
+      ],
+      "trial_downloads": [
+        "Trixy"
+      ],
+      "license_page_visits": 2,
+      "past_purchases": [],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Still searching for the perfect font? We\u2019re here to help!",
+      "body": "Hi Marcus,\n\nWe noticed you\u2019ve been exploring some fantastic display and decorative fonts on MyFonts, like Trixy and Migra\u2014great choices for bold, game-ready designs! We hope your search for the perfect font for Nordic Games Studio is going smoothly.\n\nIf you still have questions about licensing, need further recommendations, or would like assistance deciding between fonts, we\u2019re happy to help. Trixy, Nowstalgic, and Migra all fit beautifully for fantasy and gaming contexts, and we\u2019re here to ensure you get exactly what you need.\n\nFeel free to reply to this email or explore similar options directly on <a href=\"https://www.myfonts.com\">MyFonts</a>. Let us know how we can assist!\n\nCheers,  \nMyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:31.782032",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1007",
+    "email": "priya.sharma@example.com",
+    "company": "Mumbai Post News",
+    "processed_at": "2026-06-18T15:54:34.462702",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "The customer is exploring serif fonts suitable for newspaper and editorial body text. They are actively comparing options and have shown strong interest in specific fonts.",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Added to cart",
+          "points": 35
+        },
+        {
+          "signal": "Viewed licensing/pricing multiple times",
+          "points": 25
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Returned to same font family",
+          "points": 20
+        },
+        {
+          "signal": "Compared 2+ fonts",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        },
+        {
+          "signal": "Viewed 5+ fonts",
+          "points": 10
+        }
+      ],
+      "possible_blockers": [
+        "Needs to evaluate the fonts more thoroughly before committing.",
+        "Might be assessing licensing terms or overall budget alignment."
+      ],
+      "recommended_fonts": [
+        {
+          "font_name": "Freight Display",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 80
+        },
+        {
+          "font_name": "Quadraat",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 80
+        },
+        {
+          "font_name": "Canela",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 65
+        },
+        {
+          "font_name": "Bodoni 72",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 65
+        },
+        {
+          "font_name": "Reckless Neue",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 65
+        }
+      ],
+      "likely_use_case": "Designing or redesigning print or digital content for a newspaper or editorial publication, focusing on readable and professional typography.",
+      "buying_stage": "Consideration stage; the customer is evaluating options and downloading trials but has not made a purchase yet."
+    },
+    "activity": {
+      "user_id": "U1007",
+      "email": "priya.sharma@example.com",
+      "company_domain": "mumbaipost.in",
+      "platform": "MyFonts",
+      "country_code": "IN",
+      "organization_name": "Mumbai Post News",
+      "search_queries": [
+        "newspaper serif",
+        "readable body text",
+        "editorial serif"
+      ],
+      "filters_used": [
+        "serif",
+        "text"
+      ],
+      "font_pages_viewed": [
+        "Freight Display",
+        "Quadraat",
+        "Romana",
+        "Financier Display",
+        "Quadraat",
+        "Financier Display"
+      ],
+      "fonts_compared": [
+        "Quadraat",
+        "Financier Display",
+        "Romana"
+      ],
+      "time_spent_minutes": 52,
+      "visit_count": 7,
+      "repeated_visit_days": 5,
+      "cart_additions": [
+        "Financier Display",
+        "Quadraat"
+      ],
+      "cart_removals": [],
+      "trial_downloads": [
+        "Financier Display",
+        "Quadraat"
+      ],
+      "license_page_visits": 4,
+      "past_purchases": [],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Need help finding the perfect serif font for Mumbai Post News?",
+      "body": "Hi Priya,\n\nWe noticed you've been exploring serif fonts for your editorial needs, and it looks like you're getting close to finding the perfect match! With options like *Financier Display* and *Quadraat* in your cart, you're on the right track for achieving a readable and professional look for Mumbai Post News.\n\nIf you have any questions about licensing, font features, or even need more recommendations, we're here to help! A few other serif options you might love are *Freight Display* or *Canela*\u2014both excellent for editorial content.\n\nFeel free to reply to this email or explore more on [MyFonts](https://www.myfonts.com) at your convenience.\n\nLooking forward to supporting your typography journey!\n\nBest,\nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:34.462702",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1010",
+    "email": "david.chen@example.com",
+    "company": "TechFlow Inc",
+    "processed_at": "2026-06-18T15:54:39.372406",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "The customer is actively researching and likely interested in acquiring a modern sans-serif font with a clean, geometric aesthetic. Their focus appears to be centered around the 'Viale' font based on repeated visits and downloads for trial purposes.",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Added to cart",
+          "points": 35
+        },
+        {
+          "signal": "Viewed licensing/pricing multiple times",
+          "points": 25
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Returned to same font family",
+          "points": 20
+        },
+        {
+          "signal": "Existing customer",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        }
+      ],
+      "possible_blockers": "The customer might need more clarity on licensing terms, pricing, or alignment with their design goals. Additionally, they might be evaluating other options or awaiting internal approvals.",
+      "recommended_fonts": [
+        {
+          "font_name": "Viale",
+          "reason": "Matches the sans category; Matches the 'clean' style interest; Matches the 'modern' style interest",
+          "score": 80
+        },
+        {
+          "font_name": "Reckless Neue",
+          "reason": "Matches the 'modern' style interest; Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 30
+        },
+        {
+          "font_name": "Migra",
+          "reason": "Matches the 'modern' style interest; Licensing options align with pricing research",
+          "score": 20
+        },
+        {
+          "font_name": "Bodoni 72",
+          "reason": "Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 15
+        },
+        {
+          "font_name": "Freight Display",
+          "reason": "Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 15
+        }
+      ],
+      "likely_use_case": "The customer may be looking for a font suitable for branding, web design, or digital assets for their tech-focused business or projects.",
+      "buying_stage": "Consideration stage. The customer has compared options and engaged with the Viale font through trials and cart additions but has not yet completed a purchase."
+    },
+    "activity": {
+      "user_id": "U1010",
+      "email": "david.chen@example.com",
+      "company_domain": "techflow.io",
+      "platform": "MyFonts",
+      "country_code": "US",
+      "organization_name": "TechFlow Inc",
+      "search_queries": [
+        "modern sans",
+        "tech company font",
+        "clean geometric"
+      ],
+      "filters_used": [
+        "sans",
+        "geometric"
+      ],
+      "font_pages_viewed": [
+        "Viale",
+        "Viale",
+        "Viale"
+      ],
+      "fonts_compared": [],
+      "time_spent_minutes": 45,
+      "visit_count": 8,
+      "repeated_visit_days": 6,
+      "cart_additions": [
+        "Viale"
+      ],
+      "cart_removals": [],
+      "trial_downloads": [
+        "Viale"
+      ],
+      "license_page_visits": 5,
+      "past_purchases": [
+        "GT Super",
+        "Canela"
+      ],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Need help with Viale or other font options?",
+      "body": "Hi David,\n\nWe noticed you\u2019ve been exploring the Viale font on MyFonts, and it seems like you\u2019re gearing up to find the perfect typeface for TechFlow Inc. Great choice\u2014Viale is a clean, modern sans-serif that\u2019s a favorite for tech brands! If you have any questions about licensing, usage, or if you\u2019d like recommendations for similar fonts, we\u2019re here to help.\n\nAlso, if you\u2019re ready to move forward, take another look at your cart to make checkout a breeze. Or feel free to reply to this email if there\u2019s anything we can assist with!\n\nThanks for choosing MyFonts\u2014we\u2019d love to help make your next project shine.\n\nBest regards,\nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:39.372406",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1011",
+    "email": "anna.kowalski@example.com",
+    "company": "Warsaw Design Collective",
+    "processed_at": "2026-06-18T15:54:47.969862",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "The customer is actively exploring fonts with a focus on Central European character support, Polish diacritics, and elegant serif designs. They compared 'Walbaum' and 'Bodoni 72' and downloaded a trial for 'Walbaum.'",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Viewed licensing/pricing",
+          "points": 20
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Returned to same font family",
+          "points": 20
+        },
+        {
+          "signal": "Compared 2+ fonts",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        },
+        {
+          "signal": "Viewed 5+ fonts",
+          "points": 10
+        }
+      ],
+      "possible_blockers": "Uncertainty about fit or licensing terms, or possibly requiring more time to evaluate design compatibility before making a purchase.",
+      "recommended_fonts": [
+        {
+          "font_name": "Canela",
+          "reason": "Matches the serif category; Matches the 'elegant' style interest; Has a complete family with multiple weights",
+          "score": 50
+        },
+        {
+          "font_name": "Didot",
+          "reason": "Matches the serif category; Matches the 'elegant' style interest; Licensing options align with pricing research",
+          "score": 45
+        },
+        {
+          "font_name": "SangBleu Kingdom",
+          "reason": "Matches the serif category; Has elegant visual qualities; Has a complete family with multiple weights",
+          "score": 45
+        },
+        {
+          "font_name": "Walbaum",
+          "reason": "Matches the serif category; Matches the 'elegant' style interest; Licensing options align with pricing research",
+          "score": 45
+        },
+        {
+          "font_name": "Bodoni 72",
+          "reason": "Matches the serif category; Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 40
+        }
+      ],
+      "likely_use_case": "The customer appears to be searching for a serif font suitable for professional or high-end design projects in the Central European market, possibly for branding or editorial purposes.",
+      "buying_stage": "Consideration stage, as the customer has compared fonts, downloaded a trial, and visited license information but has not yet added items to the cart."
+    },
+    "activity": {
+      "user_id": "U1011",
+      "email": "anna.kowalski@example.com",
+      "company_domain": "warsawdesign.pl",
+      "platform": "MyFonts",
+      "country_code": "PL",
+      "organization_name": "Warsaw Design Collective",
+      "search_queries": [
+        "central european",
+        "polish diacritics",
+        "elegant serif"
+      ],
+      "filters_used": [
+        "serif",
+        "central european"
+      ],
+      "font_pages_viewed": [
+        "Walbaum",
+        "Bodoni 72",
+        "Didot",
+        "Ambroise",
+        "Walbaum"
+      ],
+      "fonts_compared": [
+        "Walbaum",
+        "Bodoni 72"
+      ],
+      "time_spent_minutes": 22,
+      "visit_count": 3,
+      "repeated_visit_days": 2,
+      "cart_additions": [],
+      "cart_removals": [],
+      "trial_downloads": [
+        "Walbaum"
+      ],
+      "license_page_visits": 1,
+      "past_purchases": [],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Looking for the perfect font? We\u2019re here to help!",
+      "body": "Hi Anna,\n\nThanks for exploring fonts with us at MyFonts! We noticed you\u2019ve been diving into some truly elegant serif designs like Walbaum and Bodoni 72, specifically with Central European character support. It\u2019s great to see your dedication to finding the perfect fit for your projects at Warsaw Design Collective.\n\nIf you have any questions\u2014whether it\u2019s about licensing options, Polish diacritics, or feature comparisons\u2014don\u2019t hesitate to reach out. Additionally, here are a few recommendations we think might align with your needs:\n\n- **Canela**: A modern and elegant serif with a complete family of weights.\n- **Didot**: A classic serif that balances style with versatility.\n- **SangBleu Kingdom**: Stylish and flexible for high-end design projects.\n\nHave a look, and let us know if we can assist further! We\u2019re here to make your font selection process as smooth and inspiring as possible.\n\nWarm regards,\n\nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:47.969862",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1013",
+    "email": "lisa.muller@example.com",
+    "company": "Berlin Publishing House",
+    "processed_at": "2026-06-18T15:54:54.702673",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "Customer is actively exploring serif fonts for text-heavy use, specifically focusing on book typography with support for German umlauts and Western European languages.",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Added to cart",
+          "points": 35
+        },
+        {
+          "signal": "Viewed licensing/pricing multiple times",
+          "points": 25
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Returned to same font family",
+          "points": 20
+        },
+        {
+          "signal": "Compared 2+ fonts",
+          "points": 15
+        },
+        {
+          "signal": "Existing customer",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        }
+      ],
+      "possible_blockers": "Unclear licensing terms, price sensitivity, or needing further assurance of the font's fit for their specific publishing projects.",
+      "recommended_fonts": [
+        {
+          "font_name": "Romana",
+          "reason": "Matches the serif category; Matches the 'book' style interest; Licensing options align with pricing research",
+          "score": 45
+        },
+        {
+          "font_name": "Freight Display",
+          "reason": "Matches the serif category; Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 40
+        },
+        {
+          "font_name": "Quadraat",
+          "reason": "Matches the serif category; Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 40
+        },
+        {
+          "font_name": "Canela",
+          "reason": "Matches the serif category; Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 35
+        },
+        {
+          "font_name": "Bodoni 72",
+          "reason": "Matches the serif category; Has a complete family with multiple weights; Licensing options align with pricing research",
+          "score": 35
+        }
+      ],
+      "likely_use_case": "Designing or publishing books or similar print materials requiring high-quality serif fonts tailored for complex text layouts.",
+      "buying_stage": "Mid-to-late stage; customer has spent significant time researching, downloaded trials, compared fonts, added a font to the cart, and visited license pages, but has not finalized a purchase yet."
+    },
+    "activity": {
+      "user_id": "U1013",
+      "email": "lisa.muller@example.com",
+      "company_domain": "berlinpublishing.de",
+      "platform": "MyFonts",
+      "country_code": "DE",
+      "organization_name": "Berlin Publishing House",
+      "search_queries": [
+        "book typography",
+        "german umlauts",
+        "text serif"
+      ],
+      "filters_used": [
+        "serif",
+        "text",
+        "western european"
+      ],
+      "font_pages_viewed": [
+        "Quadraat",
+        "Romana",
+        "Freight Display",
+        "Quadraat"
+      ],
+      "fonts_compared": [
+        "Quadraat",
+        "Romana"
+      ],
+      "time_spent_minutes": 30,
+      "visit_count": 4,
+      "repeated_visit_days": 3,
+      "cart_additions": [
+        "Quadraat"
+      ],
+      "cart_removals": [],
+      "trial_downloads": [
+        "Quadraat",
+        "Romana"
+      ],
+      "license_page_visits": 2,
+      "past_purchases": [
+        "Financier Display"
+      ],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Following Up on Your Font Exploration \u2013 How Can We Help?",
+      "body": "Hi Lisa,\n\nWe hope you\u2019re doing well! We noticed you\u2019ve been exploring some amazing serif fonts recently, like Quadraat and Romana, while searching for the perfect fit for your text-heavy projects. It looks like you\u2019re on the brink of something great, and we wanted to reach out to offer our assistance.\n\nIf you have any questions about licensing, font features (like those all-important German umlauts!), or picking the right typeface for book publishing, we\u2019re here to help.\n\nYou might also want to take another look at Romana \u2013 it's one of our top recommendations for your publishing needs, based on your research. Of course, Quadraat is a fantastic choice too, with its versatility and elegant serif design.\n\nLet us know if you\u2019d like any further support or font recommendations! Happy designing, Lisa.\n\nBest regards,  \nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:54.702673",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1015",
+    "email": "sarah.jones@example.com",
+    "company": "Vogue Interiors Australia",
+    "processed_at": "2026-06-18T15:54:59.580523",
+    "intent_score": 100,
+    "intent_level": "Very High",
+    "analysis": {
+      "intent_summary": "The customer is actively exploring premium serif and elegant display fonts, focused on options suitable for a luxury brand aesthetic.",
+      "buying_intent_score": 100,
+      "intent_level": "Very High",
+      "score_breakdown": [
+        {
+          "signal": "Added to cart",
+          "points": 35
+        },
+        {
+          "signal": "Viewed licensing/pricing multiple times",
+          "points": 25
+        },
+        {
+          "signal": "Downloaded trial font",
+          "points": 25
+        },
+        {
+          "signal": "Returned to same font family",
+          "points": 20
+        },
+        {
+          "signal": "Compared 2+ fonts",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        },
+        {
+          "signal": "Viewed 5+ fonts",
+          "points": 10
+        }
+      ],
+      "possible_blockers": "Potential blockers could include pricing concerns, complexity in licensing terms, or uncertainty about the final choice among similar fonts.",
+      "recommended_fonts": [
+        {
+          "font_name": "Canela",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Matches the 'elegant' style interest",
+          "score": 80
+        },
+        {
+          "font_name": "Portrait",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Has display visual qualities",
+          "score": 65
+        },
+        {
+          "font_name": "SangBleu Kingdom",
+          "reason": "Matches the serif category; Matches the 'premium' style interest; Has elegant visual qualities",
+          "score": 65
+        },
+        {
+          "font_name": "Ambroise",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Has display visual qualities",
+          "score": 65
+        },
+        {
+          "font_name": "GT Super",
+          "reason": "Matches the serif category; Matches the 'luxury' style interest; Has display visual qualities",
+          "score": 60
+        }
+      ],
+      "likely_use_case": "The customer appears to be sourcing fonts for luxury interior design branding or marketing, given their company's focus and design preferences.",
+      "buying_stage": "Consideration to early decision stage, as evidenced by trial downloads, multiple visits, and significant time spent comparing fonts."
+    },
+    "activity": {
+      "user_id": "U1015",
+      "email": "sarah.jones@example.com",
+      "company_domain": "vogueinteriors.com.au",
+      "platform": "MyFonts",
+      "country_code": "AU",
+      "organization_name": "Vogue Interiors Australia",
+      "search_queries": [
+        "luxury brand font",
+        "elegant display",
+        "premium serif"
+      ],
+      "filters_used": [
+        "serif",
+        "display"
+      ],
+      "font_pages_viewed": [
+        "Portrait",
+        "Canela",
+        "SangBleu Kingdom",
+        "Ambroise",
+        "Portrait",
+        "Canela"
+      ],
+      "fonts_compared": [
+        "Portrait",
+        "Canela",
+        "SangBleu Kingdom"
+      ],
+      "time_spent_minutes": 38,
+      "visit_count": 5,
+      "repeated_visit_days": 3,
+      "cart_additions": [
+        "Portrait",
+        "Canela"
+      ],
+      "cart_removals": [],
+      "trial_downloads": [
+        "Portrait",
+        "Canela"
+      ],
+      "license_page_visits": 3,
+      "past_purchases": [],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Need help choosing the perfect font for Vogue Interiors?",
+      "body": "Hi Sarah,\n\nWe noticed you've been exploring some beautiful serif and display fonts on MyFonts, particularly ones like Canela, Portrait, and SangBleu Kingdom. Great choices\u2014they're all excellent for creating a luxury and elegant brand aesthetic!\n\nIf you need any assistance deciding between options or have questions about licensing, we're here to help make the process a breeze. Fonts like Canela or Portrait could be a perfect match for a premium look\u2014it comes down to the small details that suit your vision best.\n\nFeel free to reply if you'd like tailored advice or insights on how these fonts might work for your projects at Vogue Interiors Australia. We're more than happy to assist!\n\nWarm regards,\nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:59.580523",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  },
+  {
+    "user_id": "U1002",
+    "email": "james@example.com",
+    "company": "Studio North",
+    "processed_at": "2026-06-18T15:54:36.116295",
+    "intent_score": 70,
+    "intent_level": "High",
+    "analysis": {
+      "intent_summary": "The customer is actively exploring modern serif fonts suitable for editorial and headline purposes, indicating a specific interest in design projects requiring elegant typography.",
+      "buying_intent_score": 70,
+      "intent_level": "High",
+      "score_breakdown": [
+        {
+          "signal": "Viewed licensing/pricing",
+          "points": 20
+        },
+        {
+          "signal": "Compared 2+ fonts",
+          "points": 15
+        },
+        {
+          "signal": "Visited over multiple days",
+          "points": 15
+        },
+        {
+          "signal": "Spent 15+ minutes researching",
+          "points": 10
+        },
+        {
+          "signal": "Returned 3+ times",
+          "points": 10
+        }
+      ],
+      "possible_blockers": "The customer may be undecided on the specific font or unsure about licensing terms or budget considerations. A lack of trial downloads suggests they might need more reassurance about font usage or quality.",
+      "recommended_fonts": [
+        {
+          "font_name": "Reckless Neue",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Matches the 'modern' style interest",
+          "score": 90
+        },
+        {
+          "font_name": "Freight Display",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 80
+        },
+        {
+          "font_name": "GT Super",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 80
+        },
+        {
+          "font_name": "Canela",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 75
+        },
+        {
+          "font_name": "Bodoni 72",
+          "reason": "Matches the serif category; Matches the 'editorial' style interest; Fits the editorial use case",
+          "score": 75
+        }
+      ],
+      "likely_use_case": "Editorial design projects, such as magazines, branding, or advertising layouts, where high-quality serif fonts are essential for impactful headlines.",
+      "buying_stage": "Consideration stage, as evidenced by repeat visits, font comparisons, and a license page visit, but no cart additions or trial downloads yet."
+    },
+    "activity": {
+      "user_id": "U1002",
+      "email": "james@example.com",
+      "company_domain": "studionorth.ca",
+      "platform": "MyFonts",
+      "country_code": "CA",
+      "organization_name": "Studio North",
+      "search_queries": [
+        "modern serif",
+        "editorial headline"
+      ],
+      "filters_used": [
+        "serif",
+        "latin"
+      ],
+      "font_pages_viewed": [
+        "GT Super",
+        "Domaine Display",
+        "Freight Display"
+      ],
+      "fonts_compared": [
+        "GT Super",
+        "Domaine Display"
+      ],
+      "time_spent_minutes": 18,
+      "visit_count": 3,
+      "repeated_visit_days": 2,
+      "cart_additions": [],
+      "cart_removals": [],
+      "trial_downloads": [],
+      "license_page_visits": 1,
+      "past_purchases": [],
+      "purchased": false
+    },
+    "email_draft": {
+      "subject": "Need help finding the perfect font for Studio North?",
+      "body": "Hi James,\n\nWe noticed you've been exploring modern serif fonts on MyFonts\u2014great taste! It looks like you're searching for just the right typeface for an editorial or headline project. Need any help narrowing down your options?\n\nHere are a few fonts we think you'll love based on your search:\n\n- **Reckless Neue**: A modern serif with an editorial flair.\n- **Freight Display**: Perfect for impactful headlines and clean layouts.\n- **GT Super**: A classic choice with contemporary charm.\n\nIf you'd like more details about these fonts, licensing options, or even recommendations specific to your project, just let us know. We're here to help!\n\nCheers,  \nThe MyFonts Sales Team",
+      "generated_at": "2026-06-18T15:54:36.116295",
+      "last_edited": null
+    },
+    "status": "pending",
+    "sent_at": null
+  }
+]
