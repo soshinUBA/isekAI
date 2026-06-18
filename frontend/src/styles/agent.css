@@ -1,7 +1,7 @@
 .agent-dashboard h1 { font-size: 1.5rem; }
 .agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
 .agent-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; }
-.agent-card h2 { display: flex; align-items: center; gap: 0.5rem; }
+.agent-card h2 { display: flex; align-items: center; gap: 0.5rem; font-size: 1rem; margin-bottom: 0.75rem; }
 .agent-card .score { font-size: 1.25rem; font-weight: 700; color: #0d6efd; }
 .agent-card .action-hint { font-size: 0.9rem; color: #555; margin: 0.5rem 0; padding: 0.5rem; background: #f0f7ff; border-radius: 4px; }
 .customer-select { display: flex; flex-direction: column; gap: 0.35rem; margin: 1rem 0; }
@@ -10,3 +10,73 @@
 .badge { font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
 .badge-ai { background: #d4edda; color: #155724; }
 .badge-rule { background: #fff3cd; color: #856404; }
+
+/* Sales Dashboard Layout */
+.sales-dashboard { padding: 1rem; max-width: 1400px; margin: 0 auto; }
+.dashboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #e0e0e0; }
+.dashboard-header h1 { font-size: 1.5rem; margin: 0; }
+
+.dashboard-layout { display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem; min-height: calc(100vh - 120px); }
+
+/* Queue Panel */
+.queue-panel { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; overflow: hidden; display: flex; flex-direction: column; }
+.queue-panel h2 { font-size: 1rem; margin: 0 0 1rem 0; color: #333; }
+.queue-list { list-style: none; padding: 0; margin: 0; overflow-y: auto; flex: 1; }
+.queue-item { padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 6px; margin-bottom: 0.5rem; cursor: pointer; transition: all 0.15s ease; display: flex; justify-content: space-between; align-items: center; }
+.queue-item:hover { background: #f8f9fa; border-color: #0d6efd; }
+.queue-item.selected { background: #e7f1ff; border-color: #0d6efd; }
+.queue-item.sent { opacity: 0.6; }
+.queue-item-main { display: flex; flex-direction: column; gap: 0.2rem; overflow: hidden; }
+.queue-email { font-weight: 500; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.queue-company { font-size: 0.75rem; color: #666; }
+.queue-item-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 0.25rem; }
+
+/* Intent Badges */
+.intent-badge { font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; background: #e0e0e0; color: #333; }
+.intent-badge.very-high { background: #28a745; color: #fff; }
+.intent-badge.high { background: #17a2b8; color: #fff; }
+.intent-badge.medium { background: #ffc107; color: #000; }
+.intent-badge.low { background: #dc3545; color: #fff; }
+.intent-badge.large { font-size: 0.85rem; padding: 0.3rem 0.75rem; }
+
+/* Status Badges */
+.status-badge { font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 3px; text-transform: uppercase; font-weight: 600; }
+.status-badge.sent { background: #d4edda; color: #155724; }
+.status-badge.pending { background: #fff3cd; color: #856404; }
+
+/* Detail Panel */
+.detail-panel { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; overflow-y: auto; }
+.detail-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #e0e0e0; }
+.detail-header h2 { font-size: 1.25rem; margin: 0; }
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+
+.center { text-align: center; padding: 2rem; }
+.muted { color: #666; font-size: 0.9rem; }
+
+/* Email Draft Card */
+.email-draft-card { grid-column: 1 / -1; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-weight: 500; margin-bottom: 0.35rem; font-size: 0.85rem; color: #333; }
+.email-subject-input { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
+.email-body-input { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; font-family: inherit; resize: vertical; line-height: 1.5; }
+.email-body-input:disabled, .email-subject-input:disabled { background: #f5f5f5; color: #666; }
+.edit-info { margin: 0.5rem 0; font-size: 0.8rem; }
+
+.email-actions { display: flex; gap: 0.75rem; margin-top: 1rem; }
+.btn { padding: 0.5rem 1rem; border: none; border-radius: 4px; font-size: 0.9rem; cursor: pointer; font-weight: 500; transition: background 0.15s ease; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn.primary { background: #0d6efd; color: #fff; }
+.btn.primary:hover:not(:disabled) { background: #0b5ed7; }
+.btn.secondary { background: #6c757d; color: #fff; }
+.btn.secondary:hover:not(:disabled) { background: #5c636a; }
+.btn.send { background: #28a745; color: #fff; }
+.btn.send:hover:not(:disabled) { background: #218838; }
+
+.sent-banner { background: #d4edda; color: #155724; padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; }
+.sent-icon { font-size: 1.1rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dashboard-layout { grid-template-columns: 1fr; }
+  .queue-panel { max-height: 300px; }
+}

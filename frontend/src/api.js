@@ -23,3 +23,8 @@ export const getCustomers = () => request("/customers");
 export const getCustomerActivity = (userId) => request("/customer/" + userId + "/activity");
 export const getCustomerAnalysis = (userId) => request("/customer/" + userId + "/analysis");
 export const generateEmail = (userId, body = {}) => request("/customer/" + userId + "/generate-email", { method: "POST", body: JSON.stringify(body) });
+
+export const runBatchProcess = () => request("/batch/process", { method: "POST" });
+export const getHighIntentQueue = () => request("/queue/high-intent");
+export const updateDraft = (userId, { subject, body }) => request("/queue/" + userId + "/update-draft", { method: "PUT", body: JSON.stringify({ subject, body }) });
+export const sendEmail = (userId) => request("/queue/" + userId + "/send", { method: "POST" });

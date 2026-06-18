@@ -99,3 +99,35 @@ class ActivityRecord(BaseModel):
     past_purchases: list[str] = Field(default_factory=list)
     purchased: bool = False
     extra: dict[str, Any] = Field(default_factory=dict)
+
+
+class QueueEmailDraft(BaseModel):
+    subject: str
+    body: str
+    generated_at: Optional[str] = None
+    last_edited: Optional[str] = None
+
+
+class QueueItem(BaseModel):
+    user_id: str
+    email: str
+    company: Optional[str] = None
+    processed_at: str
+    intent_score: int
+    intent_level: str
+    analysis: dict[str, Any]
+    activity: dict[str, Any]
+    email_draft: QueueEmailDraft
+    status: str = "pending"
+    sent_at: Optional[str] = None
+
+
+class BatchProcessResponse(BaseModel):
+    processed: int
+    high_intent: int
+    queue_size: int
+
+
+class UpdateDraftRequest(BaseModel):
+    subject: str
+    body: str

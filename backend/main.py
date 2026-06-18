@@ -8,13 +8,16 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from models.schemas import (
+    BatchProcessResponse,
     CustomerAnalysisResponse,
     EmailDraftRequest,
     EmailDraftResponse,
     FontCatalogItem,
     HealthResponse,
+    QueueItem,
+    UpdateDraftRequest,
 )
-from services import data_loader
+from services import batch_processor, data_loader
 from services.ai_analyzer import analyze_activity
 from services.email_draft import generate_email_draft
 from services.intent_scoring import calculate_intent_score
@@ -147,3 +150,34 @@ def generate_email(user_id: str, body: EmailDraftRequest | None = None) -> Email
         first_name=body.first_name,
     )
     return EmailDraftResponse(**draft)
+
+
+@app.post("/batch/process", response_model=BatchProcessResponse)
+def run_batch_process() -> BatchProcessResponse:
+    """Trigger batch processing of all customers. Filters high-intent and generates emails."""
+    result = batch_processor.process_all_customers()
+    return BatchProcessResponse(**result)
+
+
+@app.get("/queue/high-intent", response_model=list[QueueItem])
+def get_high_intent_queue() -> list[dict[str, Any]]:
+    """Get all high-intent customers with pre-generated emails."""
+    return batch_processor.get_high_intent_queue()
+
+
+@app.put("/queue/{user_id}/update-draft", response_model=QueueItem)
+def update_draft(user_id: str, body: UpdateDraftRequest) -> dict[str, Any]:
+    """Update/edit the email draft for a customer in the queue."""
+    item = batch_processor.update_email_draft(user_id, body.subject, body.body)
+    if not item:
+        raise HTTPException(status_code=404, detail="Customer not found in queue")
+    return item
+
+
+@app.post("/queue/{user_id}/send", response_model=QueueItem)
+def send_email(user_id: str) -> dict[str, Any]:
+    """Mark email as sent (mock - does not actually send)."""
+    item = batch_processor.mark_as_sent(user_id)
+    if not item:
+        raise HTTPException(status_code=404, detail="Customer not found in queue")
+    return item
