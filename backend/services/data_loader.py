@@ -71,3 +71,32 @@ def search_fonts(q: str = "", category: str | None = None, featured: bool | None
             continue
         results.append(font)
     return results
+
+
+def load_font_offers() -> list[dict[str, Any]]:
+    path = DATA_DIR / "font_offers.json"
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_font_offers(offers: list[dict[str, Any]]) -> None:
+    path = DATA_DIR / "font_offers.json"
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(offers, f, indent=2)
+
+
+def add_font_offer(offer: dict[str, Any]) -> list[dict[str, Any]]:
+    offers = load_font_offers()
+    offers = [o for o in offers if o["font_name"] != offer["font_name"]]
+    offers.append(offer)
+    save_font_offers(offers)
+    return offers
+
+
+def remove_font_offer(font_name: str) -> list[dict[str, Any]]:
+    offers = load_font_offers()
+    offers = [o for o in offers if o["font_name"] != font_name]
+    save_font_offers(offers)
+    return offers

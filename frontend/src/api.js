@@ -28,3 +28,7 @@ export const runBatchProcess = () => request("/batch/process", { method: "POST" 
 export const getHighIntentQueue = () => request("/queue/high-intent");
 export const updateDraft = (userId, { subject, body }) => request("/queue/" + userId + "/update-draft", { method: "PUT", body: JSON.stringify({ subject, body }) });
 export const sendEmail = (userId) => request("/queue/" + userId + "/send", { method: "POST" });
+
+export const getOffersWithCustomers = () => request("/offers/with-customers");
+export const addOffer = (offer) => request("/offers", { method: "POST", body: JSON.stringify(offer) });
+export const removeOffer = (fontName) => request("/offers/" + encodeURIComponent(fontName), { method: "DELETE" });

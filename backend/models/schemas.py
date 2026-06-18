@@ -131,3 +131,17 @@ class BatchProcessResponse(BaseModel):
 class UpdateDraftRequest(BaseModel):
     subject: str
     body: str
+
+
+class FontOffer(BaseModel):
+    font_name: str
+    discount_percent: int
+    original_price: float
+    offer_price: float
+    offer_ends: str
+    offer_label: str = "Special Offer"
+
+
+class OfferWithCustomers(BaseModel):
+    offer: FontOffer
+    matched_customers: list[dict[str, Any]]

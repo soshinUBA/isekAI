@@ -1,0 +1,26 @@
+[
+  {
+    "font_name": "Canela",
+    "discount_percent": 25,
+    "original_price": 49.0,
+    "offer_price": 36.75,
+    "offer_ends": "2026-06-30",
+    "offer_label": "Summer Sale"
+  },
+  {
+    "font_name": "Viale",
+    "discount_percent": 30,
+    "original_price": 42.0,
+    "offer_price": 29.40,
+    "offer_ends": "2026-06-25",
+    "offer_label": "Flash Sale"
+  },
+  {
+    "font_name": "Quadraat",
+    "discount_percent": 20,
+    "original_price": 38.0,
+    "offer_price": 30.40,
+    "offer_ends": "2026-07-15",
+    "offer_label": "Editorial Special"
+  }
+]

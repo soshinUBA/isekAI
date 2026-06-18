@@ -13,6 +13,7 @@ from models.schemas import (
     EmailDraftRequest,
     EmailDraftResponse,
     FontCatalogItem,
+    FontOffer,
     HealthResponse,
     QueueItem,
     UpdateDraftRequest,
@@ -181,3 +182,56 @@ def send_email(user_id: str) -> dict[str, Any]:
     if not item:
         raise HTTPException(status_code=404, detail="Customer not found in queue")
     return item
+
+
+@app.get("/offers")
+def get_offers() -> list[dict[str, Any]]:
+    """Get all font offers."""
+    return data_loader.load_font_offers()
+
+
+@app.get("/offers/with-customers")
+def get_offers_with_matched_customers() -> list[dict[str, Any]]:
+    """Get all offers with dynamically matched customers who have these fonts recommended."""
+    offers = data_loader.load_font_offers()
+    queue = batch_processor.get_high_intent_queue()
+    
+    results = []
+    for offer in offers:
+        font_name = offer["font_name"]
+        matched = []
+        for customer in queue:
+            rec_fonts = customer.get("analysis", {}).get("recommended_fonts", [])
+            for rec in rec_fonts:
+                if rec.get("font_name") == font_name:
+                    matched.append({
+                        "user_id": customer["user_id"],
+                        "email": customer["email"],
+                        "company": customer.get("company"),
+                        "intent_score": customer["intent_score"],
+                        "intent_level": customer["intent_level"],
+                        "match_reason": rec.get("reason", ""),
+                        "match_score": rec.get("score", 0),
+                    })
+                    break
+        
+        results.append({
+            "offer": offer,
+            "matched_customers": sorted(matched, key=lambda x: x["intent_score"], reverse=True),
+        })
+    
+    return results
+
+
+@app.post("/offers", response_model=FontOffer)
+def add_offer(offer: FontOffer) -> dict[str, Any]:
+    """Add or update a font offer."""
+    data_loader.add_font_offer(offer.model_dump())
+    return offer.model_dump()
+
+
+@app.delete("/offers/{font_name}")
+def remove_offer(font_name: str) -> dict[str, str]:
+    """Remove a font offer."""
+    data_loader.remove_font_offer(font_name)
+    return {"status": "removed", "font_name": font_name}

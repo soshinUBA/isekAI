@@ -75,8 +75,71 @@
 .sent-banner { background: #d4edda; color: #155724; padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; }
 .sent-icon { font-size: 1.1rem; }
 
+/* Dashboard Tabs */
+.dashboard-tabs { display: flex; gap: 0; margin-bottom: 1rem; border-bottom: 2px solid #e0e0e0; }
+.tab-btn { padding: 0.75rem 1.5rem; border: none; background: none; font-size: 0.95rem; font-weight: 500; color: #666; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.15s ease; }
+.tab-btn:hover { color: #333; background: #f8f9fa; }
+.tab-btn.active { color: #0d6efd; border-bottom-color: #0d6efd; }
+
+/* Recommendations Tab */
+.recommendations-tab { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; }
+.recommendations-tab h2 { font-size: 1.25rem; margin: 0 0 1.5rem 0; }
+.recommendations-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1.25rem; }
+
+.recommendation-card { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1rem; }
+.recommendation-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e0e0e0; }
+.customer-info { display: flex; flex-direction: column; gap: 0.2rem; }
+.customer-email { font-weight: 600; font-size: 0.95rem; color: #333; }
+.customer-company { font-size: 0.8rem; color: #666; }
+
+.customer-searches { margin-bottom: 1rem; font-size: 0.85rem; }
+.searches-label { color: #666; margin-right: 0.35rem; }
+.searches-text { color: #333; font-style: italic; }
+
+.fonts-list h4 { font-size: 0.9rem; margin: 0 0 0.5rem 0; color: #333; }
+.fonts-list ul { list-style: none; padding: 0; margin: 0; }
+.font-item { padding: 0.5rem; background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; margin-bottom: 0.4rem; }
+.font-name-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem; }
+.font-name { font-weight: 600; color: #0d6efd; font-size: 0.9rem; }
+.font-score { font-size: 0.75rem; background: #e7f1ff; color: #0d6efd; padding: 0.15rem 0.4rem; border-radius: 3px; font-weight: 500; }
+.font-reason { font-size: 0.8rem; color: #555; line-height: 1.4; }
+
+/* Offers Tab */
+.offers-tab { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; }
+.offers-tab h2 { font-size: 1.25rem; margin: 0 0 1.5rem 0; }
+.offers-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.offer-card { background: linear-gradient(135deg, #fff9e6 0%, #fff 50%); border: 2px solid #ffc107; border-radius: 12px; padding: 1.25rem; }
+.offer-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+.offer-font-info { display: flex; flex-direction: column; gap: 0.25rem; }
+.offer-font-name { font-size: 1.35rem; font-weight: 700; color: #333; }
+.offer-label { font-size: 0.75rem; background: #ffc107; color: #000; padding: 0.2rem 0.5rem; border-radius: 3px; font-weight: 600; display: inline-block; width: fit-content; }
+
+.offer-pricing { text-align: right; }
+.offer-discount { font-size: 1.5rem; font-weight: 700; color: #dc3545; }
+.offer-prices { display: flex; gap: 0.5rem; align-items: center; justify-content: flex-end; margin-top: 0.25rem; }
+.original-price { text-decoration: line-through; color: #999; font-size: 0.9rem; }
+.offer-price { font-size: 1.1rem; font-weight: 700; color: #28a745; }
+
+.offer-expires { font-size: 0.8rem; color: #666; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #e0e0e0; }
+
+.matched-customers-section h4 { font-size: 0.95rem; margin: 0 0 0.75rem 0; color: #333; display: flex; align-items: center; gap: 0.5rem; }
+.match-hint { font-size: 0.8rem; font-weight: 400; color: #666; }
+
+.matched-customers-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.75rem; }
+.matched-customer { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 0.75rem; }
+.matched-customer-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; }
+.matched-email { font-weight: 600; font-size: 0.9rem; color: #333; }
+.matched-company { font-size: 0.75rem; color: #666; }
+.matched-customer-meta { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem; }
+.intent-badge.small { font-size: 0.7rem; padding: 0.15rem 0.35rem; }
+.match-score { font-size: 0.75rem; color: #0d6efd; font-weight: 500; }
+.match-reason { font-size: 0.8rem; color: #555; line-height: 1.4; }
+
 /* Responsive */
 @media (max-width: 900px) {
   .dashboard-layout { grid-template-columns: 1fr; }
   .queue-panel { max-height: 300px; }
+  .recommendations-grid { grid-template-columns: 1fr; }
+  .matched-customers-list { grid-template-columns: 1fr; }
 }
