@@ -340,22 +340,22 @@ export default function SalesDashboard() {
                     </div>
                   </div>
 
-                  {/* Intent Score Breakdown */}
+                  {/* Intent Summary */}
                   <div className="card p-4">
-                    <h3 className="font-semibold text-gray-900 mb-3">Intent Score</h3>
-                    <p className="text-sm text-gray-600 mb-3">{selected.analysis?.intent_summary}</p>
-                    <div className="space-y-1">
-                      {selected.analysis?.score_breakdown?.slice(0, 4).map((item, idx) => (
-                        <div key={idx} className="flex justify-between text-sm">
-                          <span className="text-gray-500">{item.signal}</span>
-                          <span className={item.points > 0 ? "text-emerald-600" : "text-red-600"}>
-                            {item.points > 0 ? "+" : ""}{item.points}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                    <h3 className="font-semibold text-gray-900 mb-3">Intent Summary</h3>
+                    <p className="text-sm text-gray-600">{selected.analysis?.intent_summary}</p>
                   </div>
                 </div>
+
+                {/* Possible Blockers */}
+                {selected.analysis?.possible_blockers && (
+                  <div className="card p-4">
+                    <h3 className="font-semibold text-gray-900 mb-3">Possible Blockers</h3>
+                    <p className="text-sm text-amber-700 bg-amber-50 rounded-lg p-3">
+                      {selected.analysis.possible_blockers}
+                    </p>
+                  </div>
+                )}
 
                 {/* Recommended Fonts */}
                 <div className="card p-4">
