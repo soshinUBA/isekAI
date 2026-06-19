@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getHighIntentQueue, runBatchProcess, updateDraft, sendEmail, getOffersWithCustomers, getNewArrivalRecommendations } from "../api";
+import Toast from "../components/ui/Toast";
 
 function KPICard({ title, value, subtitle, trend, trendUp }) {
   return (
@@ -62,6 +63,8 @@ export default function SalesDashboard() {
   const [loadingNewArrivals, setLoadingNewArrivals] = useState(false);
   const [editSubject, setEditSubject] = useState("");
   const [editBody, setEditBody] = useState("");
+  const [toast, setToast] = useState(null);
+  const [expandedFonts, setExpandedFonts] = useState({});
 
   const loadQueue = () => {
     setLoading(true);
@@ -111,12 +114,12 @@ export default function SalesDashboard() {
     setProcessing(true);
     runBatchProcess()
       .then((result) => {
-        alert(`Processed ${result.processed} customers. ${result.high_intent} high-intent found.`);
+        setToast({ message: `Processed ${result.processed} customers. ${result.high_intent} high-intent found.`, type: "success" });
         loadQueue();
         loadOffers();
         loadNewArrivals();
       })
-      .catch((err) => alert("Error: " + err.message))
+      .catch((err) => setToast({ message: "Error: " + err.message, type: "error" }))
       .finally(() => setProcessing(false));
   };
 
@@ -128,8 +131,9 @@ export default function SalesDashboard() {
         setQueue((prev) =>
           prev.map((c) => (c.user_id === updated.user_id ? updated : c))
         );
+        setToast({ message: "Draft saved successfully", type: "success" });
       })
-      .catch((err) => alert("Error saving: " + err.message))
+      .catch((err) => setToast({ message: "Error saving: " + err.message, type: "error" }))
       .finally(() => setSaving(false));
   };
 
@@ -142,8 +146,9 @@ export default function SalesDashboard() {
         setQueue((prev) =>
           prev.map((c) => (c.user_id === updated.user_id ? updated : c))
         );
+        setToast({ message: "Email marked as sent", type: "success" });
       })
-      .catch((err) => alert("Error: " + err.message))
+      .catch((err) => setToast({ message: "Error: " + err.message, type: "error" }))
       .finally(() => setSending(false));
   };
 
@@ -450,12 +455,36 @@ export default function SalesDashboard() {
                 <div>
                   <p className="text-xs font-medium text-gray-500 mb-2">Recommended Fonts</p>
                   <div className="space-y-2">
-                    {customer.analysis?.recommended_fonts?.slice(0, 3).map((font, idx) => (
-                      <div key={idx} className="flex items-center justify-between bg-gray-50 rounded px-2 py-1.5">
-                        <span className="text-sm font-medium text-indigo-600">{font.font_name}</span>
-                        <span className="text-xs text-gray-500">{font.score} pts</span>
-                      </div>
-                    ))}
+                    {customer.analysis?.recommended_fonts?.slice(0, 3).map((font, idx) => {
+                      const fontKey = `${customer.user_id}-${idx}`;
+                      const isExpanded = expandedFonts[fontKey];
+                      return (
+                        <div key={idx} className="bg-gray-50 rounded overflow-hidden">
+                          <button
+                            onClick={() => setExpandedFonts(prev => ({ ...prev, [fontKey]: !prev[fontKey] }))}
+                            className="w-full flex items-center justify-between px-2 py-1.5 hover:bg-gray-100 transition-colors"
+                          >
+                            <span className="text-sm font-medium text-indigo-600 flex items-center gap-1">
+                              <svg 
+                                className={`w-3 h-3 transition-transform ${isExpanded ? "rotate-90" : ""}`} 
+                                fill="none" 
+                                stroke="currentColor" 
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                              {font.font_name}
+                            </span>
+                            <span className="text-xs text-gray-500">{font.score} pts</span>
+                          </button>
+                          {isExpanded && font.reason && (
+                            <div className="px-3 py-2 bg-indigo-50 border-t border-indigo-100">
+                              <p className="text-xs text-gray-600">{font.reason}</p>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -602,6 +631,14 @@ export default function SalesDashboard() {
             ))}
           </div>
         </div>
+      )}
+
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
       )}
     </div>
   );
