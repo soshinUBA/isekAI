@@ -71,6 +71,7 @@ def _process_single_customer(
     intent: dict[str, Any],
     fonts_metadata: list[dict[str, Any]],
     new_arrivals: list[dict[str, Any]],
+    all_offers: list[dict[str, Any]],
 ) -> dict[str, Any]:
     """Process a single high-intent customer (AI analysis + email generation + new arrivals matching)."""
     ai_analysis = analyze_activity(activity)
@@ -81,6 +82,18 @@ def _process_single_customer(
     ]
     
     new_arrival_recs = recommend_new_arrivals(activity, new_arrivals, limit=3)
+    
+    recommended_font_names = {r["font_name"] for r in recommended_fonts}
+    viewed_fonts = set(activity.get("font_pages_viewed", []))
+    cart_fonts = set(activity.get("cart_additions", []))
+    relevant_fonts = recommended_font_names | viewed_fonts | cart_fonts
+    
+    relevant_offers = [
+        offer for offer in all_offers
+        if offer["font_name"] in relevant_fonts
+    ]
+    if not relevant_offers:
+        relevant_offers = all_offers[:2]
     
     analysis_data = {
         "intent_summary": ai_analysis.get("intent_summary", ""),
@@ -97,6 +110,8 @@ def _process_single_customer(
         activity,
         analysis_data,
         sales_rep_name="MyFonts Sales Team",
+        offers=relevant_offers,
+        new_arrival_recommendations=new_arrival_recs,
     )
     
     return {
@@ -115,6 +130,7 @@ def _process_single_customer(
             "last_edited": None,
         },
         "new_arrival_recommendations": new_arrival_recs,
+        "relevant_offers": relevant_offers,
         "status": "pending",
         "sent_at": None,
     }
@@ -132,6 +148,7 @@ def process_all_customers(max_workers: int = MAX_WORKERS) -> dict[str, Any]:
     activities = data_loader.load_user_activity()
     fonts_metadata = data_loader.load_font_metadata()
     new_arrivals = data_loader.load_new_arrivals()
+    all_offers = data_loader.load_font_offers()
     
     existing_queue = _load_queue()
     existing_ids = {item["user_id"]: item for item in existing_queue}
@@ -167,7 +184,7 @@ def process_all_customers(max_workers: int = MAX_WORKERS) -> dict[str, Any]:
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = {
                 executor.submit(
-                    _process_single_customer, activity, intent, fonts_metadata, new_arrivals
+                    _process_single_customer, activity, intent, fonts_metadata, new_arrivals, all_offers
                 ): activity["user_id"]
                 for activity, intent in high_intent_customers
             }
